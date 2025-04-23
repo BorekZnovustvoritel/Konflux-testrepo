@@ -1,14 +1,14 @@
 ARG ALPINE_TAG=3.10
 
 FROM alpine:${ALPINE_TAG} AS build
-RUN --network=host echo "Hello world" > abc
+RUN echo "foo"
 
 FROM build AS test
-RUN --security=insecure echo "foo" > bar
+RUN echo "foo"
 
 FROM scratch
 COPY --from=build --chown=nobody:nobody abc .
-RUN --mount=type=bind,source=./abc,target=/def
+RUN echo "foo"
 
 FROM registry.access.redhat.com/ubi9/ubi:latest
 CMD ["echo hi"]
