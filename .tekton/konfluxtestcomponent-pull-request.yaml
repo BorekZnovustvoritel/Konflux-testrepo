@@ -233,7 +233,7 @@ spec:
         - name: name
           value: buildah-oci-ta
         - name: bundle
-          value: quay.io/rh-ee-mszymutk/buildah-oci-ta@sha256:94461c633794b7f84b9e816d3a1947f5655e53f4092822b5e6ec70e898abfffd
+          value: quay.io/rh-ee-mszymutk/buildah-oci-ta@sha256:235f2b30a35d2435faccd1a1761b6f16817c8519eee39dca778969e96c1b60f6
         - name: kind
           value: task
         resolver: bundles
