@@ -224,6 +224,8 @@ spec:
         value: $(tasks.prefetch-dependencies.results.SOURCE_ARTIFACT)
       - name: CACHI2_ARTIFACT
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
+      - name: TARGET_STAGE
+        value: test
       runAfter:
       - prefetch-dependencies
       taskRef:
@@ -231,7 +233,7 @@ spec:
         - name: name
           value: buildah-oci-ta
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-buildah-oci-ta:0.4@sha256:2466d6f8787363825fea838598e91ece2c80e063796613a5c13b28ab690dfbb2
+          value: quay.io/rh-ee-mszymutk/buildah-oci-ta@sha256:5b2d912455ee243954f239363adb1d4b50b104f6358eac94ca6d1ca42136beda
         - name: kind
           value: task
         resolver: bundles
